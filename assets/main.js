@@ -24,6 +24,14 @@
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   els.forEach(function (el) { io.observe(el); });
+  // od razu pokaż to, co jest w pierwszym ekranie (hero/intro) — nie czekaj na próg observera
+  // (hero bywa wyższe niż viewport i nigdy nie osiąga 12% powierzchni → zostawało puste do scrolla)
+  requestAnimationFrame(function () {
+    els.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.9 && r.bottom > 0) { el.classList.add('in'); io.unobserve(el); }
+    });
+  });
 })();
 
 // nav kondensuje się po przewinięciu (cienka linia + niższy pasek) — addytywne, lekkie
