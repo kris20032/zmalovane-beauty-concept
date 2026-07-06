@@ -76,7 +76,7 @@ h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.04;letter-spacing
 
 /* ---------- HERO (charcoal, asymetryczny editorial) ---------- */
 .hero{position:relative;background:var(--char);color:var(--ivory);min-height:100svh;display:flex;align-items:stretch;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;width:100%;align-items:stretch}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;width:100%;align-items:stretch}
 .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(96px,12vh,150px) clamp(24px,5vw,90px) clamp(48px,7vh,90px)}
 .hero-copy .kicker{margin-bottom:34px}
 .hero-h1{font-size:clamp(3.2rem,2rem+6vw,6.4rem);line-height:.98;letter-spacing:-.02em;margin-bottom:30px}
@@ -86,15 +86,15 @@ h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.04;letter-spacing
 .hero-meta{margin-top:44px;display:flex;gap:34px;flex-wrap:wrap;color:rgba(245,239,230,.6);font-size:.82rem;letter-spacing:.04em}
 .hero-meta b{color:var(--gold-lt);font-weight:600}
 .hero-fig{position:relative;overflow:hidden;min-height:56svh}
-.hero-fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%}
-.hero-fig::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(22,19,17,.5),transparent 34%)}
+.hero-fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:57% 14%}
+.hero-fig::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(22,19,17,.5),transparent 34%);pointer-events:none}
 .hero-tag{position:absolute;left:0;bottom:0;z-index:2;writing-mode:vertical-rl;transform:rotate(180deg);
   padding:18px 12px;font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;color:rgba(245,239,230,.7)}
 
 /* ---------- MARQUEE ---------- */
 .marq{background:var(--char);padding:0 0 0;overflow:hidden;border-top:1px solid var(--line-lt)}
 .marq-track{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;width:100%}
-.marq-track img{width:100%;aspect-ratio:4/5;height:auto;object-fit:contain;background:var(--char-2);display:block}
+.marq-track img{width:100%;aspect-ratio:3/4;height:auto;object-fit:cover;object-position:50% 45%;display:block}
 
 /* ---------- INTRO MANIFESTO ---------- */
 .manifesto{text-align:center;background:var(--ivory)}
