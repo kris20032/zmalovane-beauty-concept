@@ -5,18 +5,18 @@
    ============================================================ */
 
 :root{
-  /* PALETA — jasna, architektoniczna, chłodna */
-  --paper:#FBF7F4;          /* główne tło */
-  --paper-2:#F1E7E4;        /* sekcje alternatywne (chłodny jasny szary) */
-  --paper-3:#F1E7E4;        /* delikatne wypełnienia */
-  --ink:#2A2126;            /* tekst główny — chłodny grafit */
-  --ink-soft:#574550;       /* nagłówki drugorzędne */
-  --muted:#94888C;          /* tekst poboczny */
-  --line:rgba(42,33,38,.12);/* hairline */
-  --accent:#A85A6B;         /* stonowany petrol-slate — jedyny akcent */
-  --accent-d:#8A4456;
-  --accent-soft:rgba(168,90,107,.10);
-  --dark:#2A2126;           /* sekcje ciemne (stopka/CTA) */
+  /* PALETA — classy: czerń / biel / beż, jeden akcent taupe-gold */
+  --paper:#F7F3EC;          /* główne tło — ciepła biel/beż */
+  --paper-2:#EDE5D8;        /* sekcje alternatywne — miękki beż */
+  --paper-3:#EDE5D8;        /* delikatne wypełnienia */
+  --ink:#1A1714;            /* tekst główny — ciepła czerń */
+  --ink-soft:#3A342D;       /* nagłówki drugorzędne — ciemny taupe */
+  --muted:#877E71;          /* tekst poboczny — taupe */
+  --line:rgba(26,23,20,.14);/* hairline */
+  --accent:#90764A;         /* jedyny akcent — antyczny taupe-gold */
+  --accent-d:#6E5A38;       /* ciemniejszy — kontrast na przyciskach */
+  --accent-soft:rgba(144,118,74,.12);
+  --dark:#1A1714;           /* sekcje ciemne (stopka/CTA/strip) — czerń */
 
   /* ODSTĘPY — skala 4/8 */
   --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px;
@@ -595,3 +595,20 @@ img[src$="/g12.jpg"]{object-position:58% 52%}
 [style*="g12.jpg"]{background-position:58% 52%}
 img[src$="/g14.jpg"]{object-position:33% 50%}
 [style*="g14.jpg"]{background-position:33% 50%}
+
+/* ============================================================
+   REDESIGN 2026-07-06 (na życzenie klientki): classy czerń/biel/beż + realne zdjęcia z IG.
+   Doklejane NA WIERZCH — nadpisuje paletę mauve i stare kadrowania.
+   ============================================================ */
+/* Przyciski wypełnione = CZERŃ (najczystszy classy look + gwarantowany kontrast biel/czerń) */
+.btn-accent{background:var(--dark);border-color:var(--dark);color:#fff}
+.btn-accent:hover{background:#000;border-color:#000;color:#fff}
+.sticky-reserve .sr-book{background:var(--dark);color:#fff}
+.nav .nav-links a.btn-accent{background:var(--dark);border-color:var(--dark);color:#fff}
+.nav .nav-links a.btn-accent:hover{background:#000;border-color:#000;color:#fff;filter:none}
+/* Reset kadrowania pod NOWE zdjęcia (portret hero = twarz wyżej; reszta = środek) */
+img[src$="/hero.jpg"],[style*="hero.jpg"]{object-position:50% 30%;background-position:50% 30%}
+img[src$="/g2.jpg"],img[src$="/g3.jpg"],img[src$="/g4.jpg"],img[src$="/g6.jpg"],
+img[src$="/g9.jpg"],img[src$="/g12.jpg"],img[src$="/g14.jpg"]{object-position:50% 45%}
+[style*="g2.jpg"],[style*="g3.jpg"],[style*="g4.jpg"],[style*="g6.jpg"],
+[style*="g9.jpg"],[style*="g12.jpg"],[style*="g14.jpg"]{background-position:50% 45%}
