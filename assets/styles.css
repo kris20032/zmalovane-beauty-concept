@@ -76,7 +76,7 @@ h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.04;letter-spacing
 
 /* ---------- HERO (charcoal, asymetryczny editorial) ---------- */
 .hero{position:relative;background:var(--char);color:var(--ivory);min-height:100svh;display:flex;align-items:stretch;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;width:100%;align-items:stretch}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;width:100%;align-items:stretch}
 .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(96px,12vh,150px) clamp(24px,5vw,90px) clamp(48px,7vh,90px)}
 .hero-copy .kicker{margin-bottom:34px}
 .hero-h1{font-size:clamp(3.2rem,2rem+6vw,6.4rem);line-height:.98;letter-spacing:-.02em;margin-bottom:30px}
@@ -85,9 +85,9 @@ h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.04;letter-spacing
 .hero-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
 .hero-meta{margin-top:44px;display:flex;gap:34px;flex-wrap:wrap;color:rgba(245,239,230,.6);font-size:.82rem;letter-spacing:.04em}
 .hero-meta b{color:var(--gold-lt);font-weight:600}
-.hero-fig{position:relative;overflow:hidden;min-height:56svh}
-.hero-fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:57% 14%}
-.hero-fig::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(22,19,17,.5),transparent 34%);pointer-events:none}
+.hero-fig{position:relative;display:flex;align-items:center;justify-content:center;padding:clamp(80px,10vh,120px) clamp(20px,4vw,64px) clamp(40px,6vh,70px)}
+.hero-fig img{position:static;height:auto;width:auto;max-height:74vh;max-height:74svh;max-width:100%;object-fit:contain;border:1px solid rgba(201,169,112,.4)}
+.hero-fig::after{content:none}
 .hero-tag{position:absolute;left:0;bottom:0;z-index:2;writing-mode:vertical-rl;transform:rotate(180deg);
   padding:18px 12px;font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;color:rgba(245,239,230,.7)}
 
@@ -195,7 +195,8 @@ footer{background:var(--char-2);color:rgba(245,239,230,.66);padding-block:clamp(
 @media(max-width:920px){
   .hero-grid,.atelier .wrap,.book-band .wrap{grid-template-columns:1fr}
   .hero{min-height:auto}
-  .hero-fig{min-height:70svh;order:-1}
+  .hero-fig{order:-1;padding:96px 24px 0}
+  .hero-fig img{max-height:64svh}
   .svc-row{grid-template-columns:1fr;gap:24px}
   .svc-row:nth-child(even) .svc-fig{order:0}
   .svc-fig{aspect-ratio:16/11;max-height:440px}
