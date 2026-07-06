@@ -94,7 +94,7 @@ h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.04;letter-spacing
 /* ---------- MARQUEE ---------- */
 .marq{background:var(--char);padding:0 0 0;overflow:hidden;border-top:1px solid var(--line-lt)}
 .marq-track{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;width:100%}
-.marq-track img{width:100%;aspect-ratio:3/4;height:auto;object-fit:cover;object-position:50% 42%;display:block}
+.marq-track img{width:100%;aspect-ratio:4/5;height:auto;object-fit:contain;background:var(--char-2);display:block}
 
 /* ---------- INTRO MANIFESTO ---------- */
 .manifesto{text-align:center;background:var(--ivory)}
