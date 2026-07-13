@@ -29,6 +29,19 @@
     });
   }
 
+  // hero video: pilnuj autoodtwarzania (przegladarki bywaja wybredne)
+  var hv=document.querySelector('.hero-video');
+  if(hv){
+    var playHV=function(){var p=hv.play();if(p&&p.catch)p.catch(function(){});};
+    playHV();
+    hv.addEventListener('canplay',playHV);
+    hv.addEventListener('loadeddata',playHV);
+    ['click','touchstart','scroll','keydown','pointerdown'].forEach(function(ev){
+      window.addEventListener(ev,playHV,{once:true,passive:true});
+    });
+    document.addEventListener('visibilitychange',function(){if(!document.hidden)playHV();});
+  }
+
   // reveal
   var rv=document.querySelectorAll('.rv');
   if('IntersectionObserver' in window){
